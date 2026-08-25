@@ -75,7 +75,7 @@ st.sidebar.title("Módulos")
 st.image("Python_logo.png")
 st.sidebar.image("DMC.png")
 
-modulos = st.sidebar.selectbox("Elija un módulo", ["Home","Carga del Dataset","Análisis Exploratorio de Datos (EDA)"]
+modulos = st.sidebar.selectbox("Elija un módulo", ["Home","Carga del Dataset","Análisis Exploratorio de Datos (EDA)"])
 
 if modulos == "Home":
  st.subheader("Módulo 2 - Pyhon Data Analytics")
