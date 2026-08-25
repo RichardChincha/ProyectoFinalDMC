@@ -86,7 +86,7 @@ if modulos == "Home":
  st.write("Dataset sobre la base de clientes de una empresa de seguros")
  st.write("Tecnologías: Uso de Pandas, numpy, streamlit")
 
- elif hojas =="Carga del Dataset":
+elif hojas =="Carga del Dataset":
     st.subheader("Carga del dataset Insurance Company")
     st.markdown("-----")
     
@@ -119,7 +119,7 @@ if modulos == "Home":
         else:
             st.warning(" Debe subir el archivo .csv para continuar.")
           
- elif hojas =="Análisis Exploratorio de Datos (EDA)":   
+elif hojas =="Análisis Exploratorio de Datos (EDA)":   
     st.subheader(" Módulo 2: Análisis Exploratorio de Datos (EDA)")
     st.markdown("---")
     
