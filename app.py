@@ -5,9 +5,8 @@ import pandas as pd
 import seaborn as sns
 import streamlit as st
 
-# ==============================================================================
-# CLASE POO: DataAnalyzer (ENCAPSULAMIENTO DE LÓGICA Y VISUALIZACIÓN)
-# ==============================================================================
+
+# DataAnalyzer 
 class DataAnalyzer:
     def __init__(self, df: pd.DataFrame):
         self.df = df
@@ -142,9 +141,9 @@ elif modulos =="Análisis Exploratorio de Datos (EDA)":
             "Parámetros & Hallazgos (Ítems 9-10)"
         ])
     
-        # --------------------------------------------------------------------------
+     
         # TAB 1: ÍTEMS 1 Y 2
-        # --------------------------------------------------------------------------
+  
         with tab1:
             st.markdown(" Ítem 1: Información General del Dataset")
             col1, col2 = st.columns(2)
@@ -170,9 +169,9 @@ elif modulos =="Análisis Exploratorio de Datos (EDA)":
                 st.success(f" **Variables Categóricas ({len(cat_cols)} identificadas):**")
                 st.write(cat_cols)
     
-        # --------------------------------------------------------------------------
+
         # TAB 2: ÍTEMS 3 Y 4
-        # --------------------------------------------------------------------------
+   
         with tab2:
             st.markdown(" Ítem 3: Estadísticas Descriptivas")
             st.write("Medidas de tendencia central (**media, mediana, moda**) y dispersión (**desviación estándar, cuartiles**):")
@@ -195,9 +194,9 @@ elif modulos =="Análisis Exploratorio de Datos (EDA)":
             else:
                 st.success(" El dataset no registra valores faltantes.")
     
-        # --------------------------------------------------------------------------
+     
         # TAB 3: ÍTEMS 5 Y 6
-        # --------------------------------------------------------------------------
+
         with tab3:
             st.markdown(" Ítem 5: Distribución de Variables Numéricas")
             col_ctrl1, col_ctrl2 = st.columns(2)
@@ -223,9 +222,8 @@ elif modulos =="Análisis Exploratorio de Datos (EDA)":
             with col_c2:
                 st.pyplot(analyzer.graficar_categorica(col_cat_sel))
     
-        # --------------------------------------------------------------------------
         # TAB 4: ÍTEMS 7 Y 8
-        # --------------------------------------------------------------------------
+      
         with tab4:
             st.markdown(" Ítem 7: Análisis Bivariado (Numérico vs Categórico / Renewal)")
             col_biv_num = st.selectbox(
@@ -244,9 +242,8 @@ elif modulos =="Análisis Exploratorio de Datos (EDA)":
             )
             st.pyplot(analyzer.graficar_cat_vs_cat(col_biv_cat, col_cat2="renewal"))
     
-        # --------------------------------------------------------------------------
         # TAB 5: ÍTEMS 9 Y 10
-        # --------------------------------------------------------------------------
+       
         with tab5:
             st.markdown(" Ítem 9: Análisis Basado en Parámetros Dinámicos")
             # Widget obligatorio: st.multiselect
